@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff8ee;
+    color: #2b251d;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    background: #2b251d;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #f5d57a;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff8ee;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f5d57a;
+}
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #fff8ee 0%, #f4dfad 100%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.tag,
+.section-tag {
+    color: #b28a00;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: clamp(2.3rem, 6vw, 4.8rem);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+.btn-primary,
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #b28a00;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary:hover,
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+    background: #8c6d00;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 40px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 45px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: #f5d57a;
+    color: #2b251d;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    font-size: 1.6rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+}
+
+/* EVENTS */
+
+.events {
+    background: #2b251d;
+    color: white;
+}
+
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.events-list span {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 14px 22px;
+    border-radius: 999px;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 90px 0;
+    background: linear-gradient(135deg, #b28a00, #f5d57a);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+.contact p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    }
+
+    .hero-text p {
+    margin-inline: auto;
+    }
+
+    .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-links {
+    gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 18px 0;
+    gap: 15px;
+    }
+
+    .nav-links {
+    font-size: 0.9rem;
+    }
+
+    .cards-grid {
+    grid-template-columns: 1fr;
+    }
+
+    .hero {
+    padding: 60px 0;
+    }
+}
