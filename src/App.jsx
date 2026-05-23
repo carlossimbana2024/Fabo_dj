@@ -4,6 +4,8 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Events from "./components/Events";
+import WhatsAppButton from "./components/WhatsAppButton";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Gallery />
         <Events />
         <Contact />
       </main>
+      <WhatsAppButton />
       <Footer/>
     </>
   )

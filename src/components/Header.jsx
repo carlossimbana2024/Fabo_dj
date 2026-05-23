@@ -2,7 +2,7 @@ function Header() {
     return (
     <header className="header">
         <nav className="navbar container">
-        <h1 className="logo">FABO DJ</h1>
+        <a href="#" className="logo">FABO DJ</a>
 
         <ul className="nav-links">
             <li><a href="#servicios">Servicios</a></li>
